@@ -1,0 +1,45 @@
+$cdark: #222;
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+a {
+	color: $cdark!important;
+	opacity: .8;
+	&:hover, &:focus {
+		text-decoration: none;
+		opacity: 1;
+	}
+}
+
+.navi {
+	@include flexbox;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 60px;
+	.action {
+		a {
+			font-weight: 700;
+			padding: 0 16px;	
+		}
+	}
+}
+
+.gallery {
+	@include flexbox;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.img {
+		width: 49%;
+		height: 48vh;
+		margin-bottom: 2vh;
+		background-size: cover;
+		background-position: center;
+	}
+}
